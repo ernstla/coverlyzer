@@ -1,0 +1,12 @@
+*.log
+.cache
+.php-cs-fixer.cache
+.php_cs.cache
+.phpactor.json
+.phpunit.cache
+.phpunit.result.cache
+composer.lock
+/coverage
+/data
+/tmp
+/vendor
