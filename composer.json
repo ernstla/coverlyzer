@@ -14,5 +14,8 @@
             "email": "thomas.ernst@ebenefuenf.de"
         }
     ],
-    "require": {}
+    "require": {
+        "composer-runtime-api": "^2.2.2",
+        "phpunit/php-code-coverage": "^10.1"
+    }
 }
