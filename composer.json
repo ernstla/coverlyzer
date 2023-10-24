@@ -1,6 +1,6 @@
 {
     "name": "ernst/coverlyzer",
-    "description": "Tool to analyze PHPUnit test coverage report in PHP format",
+    "description": "Tool to analyze PHPUnit test coverage reports in PHP format",
     "type": "tool",
     "license": "MIT",
     "autoload": {
@@ -17,5 +17,8 @@
     "require": {
         "composer-runtime-api": "^2.2.2",
         "phpunit/php-code-coverage": "^10.1"
-    }
+    },
+    "bin": [
+        "bin/coverlyzer"
+    ]
 }
