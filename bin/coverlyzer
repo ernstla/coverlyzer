@@ -9,16 +9,16 @@ use Ernst\Coverlyzer\Analyzer;
 use SebastianBergmann\CodeCoverage\CodeCoverage;
 
 if (!isset($argv[1])) {
-    echo 'coverlyzer: Missing file operand' . PHP_EOL;
-    echo 'Try `php coveranalyze.php path/to/coverage/file.php`' . PHP_EOL;
+    print('coverlyzer: Missing file operand' . PHP_EOL);
+    print('Try `coverlyzer path/to/coverage/file.php`' . PHP_EOL);
     exit(1);
 }
 
 $coverage = require $argv[1];
 
 if (!($coverage instanceof CodeCoverage)) {
-    echo 'coverlyzer: Wrong file format' . PHP_EOL;
-    echo 'File: ' . $argv[1]. PHP_EOL;
+    print('coverlyzer: Wrong file format' . PHP_EOL);
+    print('File: ' . $argv[1] . PHP_EOL);
     exit(1);
 }
 
