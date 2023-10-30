@@ -63,7 +63,7 @@ class Analyzer
 
     public function run(): void
     {
-        print("Coverlyzer - PHPUnit coverage report:\n");
+        print("Coverlyzer - PHPUnit coverage report:" . PHP_EOL);
 
         /** @var Directory<File|Directory> $report */
         $report = $this->coverage->getReport();
@@ -96,15 +96,15 @@ class Analyzer
             printf(" {$color}% 6.02f%%\033[0m {$name}.php", $percentage);
 
             if  ($uncoveredLines) {
-                print(" \033[90m{$uncoveredLines}\033[0m\n");
+                print(" \033[90m{$uncoveredLines}\033[0m" . PHP_EOL);
             } else {
-                print("\n");
+                print(PHP_EOL);
             }
         }
 
         $totalCoverage = $report->percentageOfExecutedLines()->asFloat();
         $color = $this->getColor($totalCoverage);
 
-        printf("Summary: {$color}%.02f%%\033[0m covered lines\n", $totalCoverage);
+        printf("Summary: {$color}%.02f%%\033[0m covered lines" . PHP_EOL, $totalCoverage);
     }
 }
